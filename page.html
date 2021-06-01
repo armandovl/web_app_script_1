@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <label>Nombre: </label> <input type="text" id="username">
+    <button id="boton">Runit</button>
+    
+  
+    <script>
+    //traer el elemento boton por su id
+    document.getElementById("boton").addEventListener("click",enviarSheet);
+    
+    //cuando haga click, ejecutar la funcion enviar sheet
+    function enviarSheet(){
+    
+      var nombre1= document.getElementById("username").value;
+
+      google.script.run.hacerClick(nombre1); // *esta linea ejecuta funciones del .gs el nombre1 pasa como argumento
+      
+      document.getElementById("username").value="";
+      
+      
+    }
+    </script>
+  </body>
+</html>
+
+
